@@ -1,0 +1,26 @@
+# Environment
+venv/
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+logs/
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# dbt artifacts
+dbt_project/target/
+dbt_project/dbt_packages/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (optionnel)
+.vscode/
