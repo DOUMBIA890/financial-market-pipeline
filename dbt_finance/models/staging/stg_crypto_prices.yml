@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_crypto_prices
+    columns:
+
+      - name: crypto
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['bitcoin', 'ethereum', 'solana']
+
+      - name: price_usd
+        tests:
+          - not_null
+
+      - name: date_only
+        tests:
+          - not_null
+
+      - name: timestamp
+        tests:
+          - not_null
+
+    tests:
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "price_usd_clean > 0"
